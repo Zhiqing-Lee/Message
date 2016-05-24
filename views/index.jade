@@ -1,5 +1,24 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form.form-horizontal(action='/post', method='post')
+    div.form-group
+      label.col-sm-2.control-label(for='nickname') 昵称
+      div.col-sm-10
+        input.form-control(type='text', id='nickname', name='nickname', placeholder='Nickname')
+    div.form-group
+      label.col-sm-2.control-label(for='email') 邮箱
+      div.col-sm-10
+        input.form-control(type='email', id='email', name='email', placeholder='Email')
+    div.form-group
+      label.col-sm-2.control-label(for='message') 内容
+      div.col-sm-10
+        textarea.form-control(rows='3', id='message', name='message', placeholder='Message')
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        button.btn.btn-default(type='submit') 留言
+
+  each message in messages
+    .message
+      label.col-sm-2.control-label #{message.nickname}
+      p.col-sm-10.bg-info #{message.message}

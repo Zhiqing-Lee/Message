@@ -1,0 +1,17 @@
+#container{
+  max-width: 600px;
+  margin: 3em auto;
+  padding: 0 2em;
+}
+form{
+  margin-bottom: 3em;
+}
+.message label{
+  padding-top: 7px;
+  text-align: right;
+}
+.message p{
+}
+.message{
+  margin-bottom: 1em;
+}
