@@ -12,6 +12,9 @@ form{
 }
 .message p{
 }
+.panel-body  {
+    word-break: break-all;
+}
 .message{
   margin-bottom: 1em;
 }
