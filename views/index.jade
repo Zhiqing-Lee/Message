@@ -3,7 +3,7 @@ extends layout
 block content
   form.form-horizontal(action='/post', method='post')
     div.form-group
-      label.col-sm-2.control-label(for='nickname') 昵称
+      label.col-md-2.control-label(for='nickname') 昵称
       div.col-sm-10
         input.form-control(type='text', id='nickname', name='nickname', placeholder='Nickname')
     div.form-group
@@ -19,6 +19,7 @@ block content
         button.btn.btn-default(type='submit') 留言
 
   each message in messages
-    .message
-      label.col-sm-2.control-label #{message.nickname}
-      p.col-sm-10.bg-info #{message.message}
+    .panel.panel-info
+      .panel-heading
+        h3.panel-title #{message.nickname}
+      .panel-body #{message.message}
